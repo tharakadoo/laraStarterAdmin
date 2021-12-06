@@ -92,5 +92,5 @@ Give a ⭐️ if this project helped you!
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](https://github.com/tharakadoo/laraStarterAdmin/blob/main/screen_shots/lara%20admin%201.PNG)
 
