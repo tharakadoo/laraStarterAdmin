@@ -94,3 +94,21 @@ Give a ⭐️ if this project helped you!
 
 ![App Screenshot](https://github.com/tharakadoo/laraStarterAdmin/blob/main/screen_shots/lara%20admin%201.PNG)
 
+![App Screenshot](https://github.com/tharakadoo/laraStarterAdmin/blob/main/screen_shots/lara%20admin%202.PNG)
+
+![App Screenshot](https://github.com/tharakadoo/laraStarterAdmin/blob/main/screen_shots/lara%20admin%203.PNG)
+
+![App Screenshot](https://github.com/tharakadoo/laraStarterAdmin/blob/main/screen_shots/lara%20admin%204.PNG)
+
+![App Screenshot](https://github.com/tharakadoo/laraStarterAdmin/blob/main/screen_shots/lara%20admin%205.PNG)
+
+![App Screenshot](https://github.com/tharakadoo/laraStarterAdmin/blob/main/screen_shots/lara%20admin%206.PNG)
+
+
+
+## License
+
+This project is licened under  [MIT](https://choosealicense.com/licenses/mit/)
+
+
+
