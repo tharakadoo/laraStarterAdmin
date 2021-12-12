@@ -10,7 +10,10 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link href="https://cdn.datatables.net/v/bs4/dt-1.11.3/datatables.min.css" rel="stylesheet" />
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 <body>
 <div class="sidebar sidebar-light sidebar-fixed" id="sidebar">
@@ -91,7 +94,9 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" crossorigin="anonymous"></script>
 {{--<script src="{{ asset('js/coreui.bundle.min.js') }}"></script>--}}
 <script src="{{ asset('js/coreui.js') }}"></script>
+<script src="{{ asset('js/custom.js') }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script src="https://cdn.datatables.net/v/bs4/dt-1.11.3/datatables.min.js"></script>
 @yield('script')
 </body>
 

@@ -12,7 +12,7 @@ laraStarterAdmin built to cut initial creation time of a laravel project.
 
 - Authentication (Login, Register, Password Reset)
 - Authorization - Create Role, Assign Users to Roles, Add permissions to Roles.
-- Simple CRUD 
+- Simple CRUD with Ajax Datatables
 
 
 ## Installation
@@ -61,19 +61,19 @@ laraStarterAdmin built to cut initial creation time of a laravel project.
 
 ## Related
 
-Following libaries, Packages are used in this app.
+Following libraries, Packages are used in this app.
 
 - [LaravelDaily/Larastarters](https://github.com/LaravelDaily/Larastarters)
 - [CoreUi](https://coreui.io/) 
 - [Select2](https://github.com/select2/select2) 
+- [Laravel DataTable](https://datatables.yajrabox.com) 
 
 ## More
 
 Want more functions? Raise an issue with your suggestion
 ## Authors
 
-- [@tharakadoo](https://www.github.com/tharakadoo) - tharakadoo@gmail.com
-- [tharakakasun.com](https://www.github.com/tharakadoo)  
+- [@tharakadoo](https://www.github.com/tharakadoo) - tharakadoo@gmail.com - [tharakakasun.com](http://www.tharakakasun.com)  
 
 
 ## Contributing
@@ -108,7 +108,7 @@ Give a ⭐️ if this project helped you!
 
 ## License
 
-This project is licened under  [MIT](https://choosealicense.com/licenses/mit/)
+This project is licensed under  [MIT](https://choosealicense.com/licenses/mit/)
 
 
 

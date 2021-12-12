@@ -36,4 +36,8 @@ Route::middleware('auth')->group(function () {
     Route::resource('roles', RoleController::class);
     Route::resource('users', UserController::class);
     Route::resource('clients', ClientController::class);
+
+    Route::get('getDT', [\App\Http\Controllers\ClientController::class, 'getDT'])->name('clients.getDT');
+    Route::post('clients_delete_ajax', [\App\Http\Controllers\ClientController::class, 'client_delete'])->name('clients.delete.ajax');
+
 });

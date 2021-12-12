@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use App\Models\Client;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Yajra\DataTables\DataTables;
 
 class ClientController extends Controller
 {
@@ -16,9 +18,7 @@ class ClientController extends Controller
 
     public function index()
     {
-        $clients = Client::latest()->paginate(5);
-        return view('clients.index',compact('clients'))
-            ->with('i', (request()->input('page', 1) - 1) * 5);
+        return view('clients.index');
     }
 
     public function create()
@@ -68,6 +68,37 @@ class ClientController extends Controller
 
         return redirect()->route('clients.index')
             ->with('success','Client deleted successfully');
+    }
+
+    public function getDT()
+    {
+        //return Datatables::of(Client::query())->make(true);
+        $data = Client::latest()->get();
+        return Datatables::of($data)
+            ->addIndexColumn()
+            ->addColumn('action', function($row){
+
+                $btn = ' <a class="btn btn-info btn-sm" href="'. route('clients.show',$row->id) .'">Show</a> ';
+
+                if(auth()->user()->can('client-edit')){
+                    $btn .= '<a class="btn btn-primary btn-sm" href="'. route('clients.edit',$row->id) .'">Edit</a>  ';
+                }
+
+                if(auth()->user()->can('client-delete')){
+                    $btn .= '<a href="javascript:void(0)" data-id="'.$row->id.'" class="delete btn btn-danger btn-sm">Delete</a> ';
+                }
+
+                return $btn;
+            })
+            ->rawColumns(['action'])
+            ->make(true);
+    }
+
+    public function client_delete(Request $request) {
+        $affected = DB::table('clients')
+            ->where('id', $request->id)
+            ->delete();
+        return response()->json(['status'=>'1', 'msg'=>'Deleted successfully!']);
     }
 
 
