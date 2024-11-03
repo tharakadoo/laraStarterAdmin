@@ -1,7 +1,7 @@
 
 # laraStarterAdmin
 
-Laravel 8 Admin Starter Kit with CoreUi. 
+Laravel 11 Admin Starter Kit with CoreUi. 
 laraStarterAdmin built to cut initial creation time of a laravel project.
  
 
