@@ -20,54 +20,54 @@
                 </div>
             @endif
 
-                {!! Form::open(array('route' => 'users.store','method'=>'POST')) !!}
+            <form action="{{ route('users.store') }}" method="POST">
+                @csrf
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
                             <strong>Name:</strong>
-                            {!! Form::text('name', null, array('placeholder' => 'Name','class' => 'form-control')) !!}
+                            <input type="text" name="name" placeholder="Name" class="form-control">
                         </div>
                     </div>
-
+            
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
                             <strong>Email:</strong>
-                            {!! Form::text('email', null, array('placeholder' => 'Email','class' => 'form-control')) !!}
+                            <input type="text" name="email" placeholder="Email" class="form-control">
                         </div>
                     </div>
-
+            
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
                             <strong>Password:</strong>
-                            {!! Form::password('password', array('placeholder' => 'Password','class' => 'form-control')) !!}
+                            <input type="password" name="password" placeholder="Password" class="form-control">
                         </div>
                     </div>
-
+            
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
                             <strong>Confirm Password:</strong>
-                            {!! Form::password('confirm-password', array('placeholder' => 'Confirm Password','class' => 'form-control')) !!}
+                            <input type="password" name="confirm-password" placeholder="Confirm Password" class="form-control">
                         </div>
                     </div>
-
+            
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
                             <strong>Role:</strong>
                             <select class="form-control select2" name="roles[]" multiple>
                                 @foreach($roles as $role)
-                                    <option value="{{$role}}"> {{$role}} </option>
+                                    <option value="{{ $role }}">{{ $role }}</option>
                                 @endforeach
                             </select>
                         </div>
                     </div>
-
+            
                     <div class="col-xs-12 col-sm-12 col-md-12 text-center mt-2">
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
-
                 </div>
-
-                {!! Form::close() !!}
+            </form>
+            
 
         </div>
     </div>

@@ -21,12 +21,13 @@
                 </div>
             @endif
 
-                {!! Form::open(array('route' => 'roles.store','method'=>'POST')) !!}
+            <form action="{{ route('roles.store') }}" method="POST">
+                @csrf
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
                             <strong>Name:</strong>
-                            {!! Form::text('name', null, array('placeholder' => 'Name','class' => 'form-control')) !!}
+                            <input type="text" name="name" placeholder="Name" class="form-control">
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-12">
@@ -34,8 +35,10 @@
                             <strong>Permission:</strong>
                             <br/>
                             @foreach($permission as $value)
-                                <label>{{ Form::checkbox('permission[]', $value->id, false, array('class' => 'name')) }}
-                                    {{ $value->name }}</label>
+                                <label>
+                                    <input type="checkbox" name="permission[]" value="{{ $value->id }}" class="name">
+                                    {{ $value->name }}
+                                </label>
                                 <br/>
                             @endforeach
                         </div>
@@ -44,7 +47,8 @@
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
                 </div>
-                {!! Form::close() !!}
+            </form>
+            
 
         </div>
     </div>
